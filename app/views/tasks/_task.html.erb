@@ -1,0 +1,11 @@
+<div id="<%= dom_id(task) %>" class="p-4 bg-gray-100 border border-gray-300 rounded mb-2">
+  <h3 class="font-bold"><%= task.title %></h3>
+  <p class="text-sm text-gray-700"><%= task.description %></p>
+  <p class="text-xs text-gray-500">Terminée : <%= task.completed ? "Oui" : "Non" %></p>
+  <div class="mt-2 flex space-x-2">
+    <%= link_to "Modifier", edit_task_path(task), class: "bg-yellow-500 hover:bg-yellow-700 text-white font-bold py-1 px-2 rounded" %>
+    <%= link_to "Supprimer", task_path(task), method: :delete, data: { turbo_confirm: "Êtes-vous sûr ?" }, class: "bg-red-500 hover:bg-red-700 text-white font-bold py-1 px-2 rounded" %>
+  </div>
+</div>
+
+

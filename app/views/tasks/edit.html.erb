@@ -1,0 +1,9 @@
+<div class="container mx-auto p-8">
+  <h1 class="text-3xl font-bold mb-6">Modifier la tâche</h1>
+
+  <%= render "form", task: @task %>
+
+  <div class="mt-4">
+    <%= link_to "Retour à la liste", tasks_path, class: "bg-gray-500 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded" %>
+  </div>
+</div>
